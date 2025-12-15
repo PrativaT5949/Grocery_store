@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog Page - Grocery Store</title>
+  <link rel="stylesheet" href="styless.css"/>
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <style>
+    
+    /* Basic Reset and Styling */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+      padding: 2rem 5%;
+    }
+
+    h1.heading {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      color: #ff7800;
+      position: relative;
+      display: inline-block;
+    }
+
+    h1.heading::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #ff7800;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    /* Blog Container */
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Individual Blog Box */
+    .blog-box {
+      background: #fff;
+      border-radius: 0.7rem;
+      box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .blog-box:hover {
+      box-shadow: 0 1rem 2rem rgba(255, 120, 0, 0.3);
+    }
+
+    .blog-box img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 1.5rem 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-content h3 {
+      font-size: 2rem;
+      color: #222;
+      margin-bottom: 1rem;
+    }
+
+    .blog-content p.summary {
+      font-size: 1.4rem;
+      color: #ff7800;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .blog-content p.more-content {
+      font-size: 1.4rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    .read-more-btn {
+      align-self: flex-start;
+      background: transparent;
+      border: 2px solid #ff7800;
+      color: #ff7800;
+      padding: 0.6rem 1.8rem;
+      border-radius: 0.7rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+      user-select: none;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .read-more-btn:hover {
+      background: #ff7800;
+      color: #fff;
+      box-shadow: 0 0.5rem 1rem #ff7800;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .blog-box img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <a href="indexs.html" class="btn">Back to Home</a>
+  <h1 class="heading">Our <span style="color:#222;">Blogs</span></h1>
+
+  <div class="blog-container">
+
+    <!-- Blog Post 1 -->
+    <article class="blog-box">
+      <img src="blog1.jpg" alt="Fresh and organic Vegetables" />
+      <div class="blog-content">
+        <h3>Fresh and organic Vegetables</h3>
+        <p class="summary">
+          Discover the benefits of incorporating fresh and organic vegetables into your diet.
+        </p>
+        <p class="more-content">
+          Eating fresh and organic vegetables provides essential nutrients, antioxidants, and fiber that promote good health. Organic farming avoids synthetic pesticides, making produce safer and more environmentally friendly. Incorporate a colorful variety of vegetables into your meals for optimal benefits.
+        </p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </article>
+
+    <!-- Blog Post 2 -->
+    <article class="blog-box">
+      <img src="blog2.jpg" alt="Seasonal Vegetables" />
+      <div class="blog-content">
+        <h3>Seasonal Vegetables</h3>
+        <p class="summary">
+          Explore delicious recipes using seasonal ingredients.
+        </p>
+        <p class="more-content">
+          Seasonal vegetables are fresher, tastier, and often more affordable. They provide the best flavors and nutrients at the right time of the year. Try recipes that highlight seasonal produce like roasted squash in fall or fresh tomatoes in summer for a delightful culinary experience.
+        </p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </article>
+
+    <!-- Blog Post 3 -->
+    <article class="blog-box">
+      <img src="blog3.jpg" alt="Grocery Shopping Guide" />
+      <div class="blog-content">
+        <h3>Grocery Shopping Guide</h3>
+        <p class="summary">
+          Learn how to make the most of your grocery shopping experience.
+        </p>
+        <p class="more-content">
+          Planning your grocery shopping can save time and money. Make a list, stick to it, and shop the perimeter of the store for fresh produce, dairy, and meats. Avoid impulse buys and check for deals on staples. Shopping smart helps maintain a healthy diet and budget.
+        </p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </article>
+
+  </div>
+
+  <script>
+    // Toggle "Read More" content visibility
+    document.querySelectorAll('.read-more-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const moreContent = button.previousElementSibling;
+        if (moreContent.style.display === 'block') {
+          moreContent.style.display = 'none';
+          button.textContent = 'Read More';
+        } else {
+          moreContent.style.display = 'block';
+          button.textContent = 'Read Less';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <!--google fonts-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- customer css -->
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"> <i class="fas fa-shopping-cart"></i> Grocery Store</a>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#products">Products</a>
+        <a href="#categories">Categories</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#blogs">Blogs</a>
+    </nav>
+     <div class="icons">
+         <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>  
+        <div class="fas fa-user" id="login-btn"></div>
+       
+     </div>
+     <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="Search here...">
+        <label for="search-box" class="fas fa-search"></label>
+     </form>
+
+    <div class="shopping-cart">
+        <div class="cart-items-container"></div>
+         <div class="total">Total: RS 0</div>
+    <a href="#" class="btn">Checkout</a>
+        </div>
+
+    <form action="" class="login-form">
+        <h3>Login</h3>
+        <input type="email" placeholder="Email" class="box">
+        <input type="password" placeholder="Password" class="box">
+        <p>forget your password <a href="#">Click here</a></p>
+        <p>Don't have an account? <a href="#">Create one</a></p>
+        <input type="submit"  value="Login now"class="btn">
+        <!-- <button type="reset" class="btn">Password</button>
+        <button type="reset" class="btn">Reset</button> -->
+    </form>
+    </header>
+    <!-- home -->
+<section class="home" id="home">
+    <div class="content">
+        <h3>Fresh and <span>Organic Groceries</span> Delivered to Your Doorstep</h3>
+        <p>Experience the convenience of online grocery shopping with our wide selection of fresh produce, pantry staples, and household essentials.</p>
+        <a href="#" class="btn view-header-modal" data-header-id="shop-now">Shop Now</a>
+    </div>
+    <!-- Header Shop Now Modal -->
+<div id="shop-now-modal" class="header-modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h3>Shop Now</h3>
+    <p>Welcome to our online grocery store! Browse our fresh produce, pantry staples, and household essentials. Enjoy easy shopping with fast delivery and secure payment options.</p>
+    <a href="#products" id="browse-products-btn" class="btn">Browse Products</a>
+  </div>
+</div>
+
+    </section>
+    
+    <!-- feature section start -->
+     <section class="features" id="features">
+        <h1 class="heading">Our <span>Features</span></h1>
+        <div class="box-container">
+            <div class="swiper-slide box">
+                <img src="fresh-produce.jpg" alt="">
+                <h3>Fresh and Organic</h3>
+                <p>Discover our range of fresh and organic produce sourced from local farms.</p>
+                <a href="#" class="btn view-feature-modal"data-feature-id="fresh-organic">Learn More</a>
+            </div>
+            <!-- Free Delivery  -->
+            <div class="swiper-slide box">
+                <img src="delivery.jpg" alt="">
+                <h3>Free Delivery</h3>
+                <p>Enjoy free delivery on orders over RS 500.</p>
+                <a href="#" class="btn view-feature-modal" data-feature-id="free-delivery">Learn More</a>
+            </div>
+            <div class="swiper-slide box">
+                <img src="payment.jpg" alt="">
+                <h3>easy payment</h3>
+                <p>We offer a variety of secure payment options for your convenience.</p>
+                <a href="#" class="btn view-feature-modal"data-feature-id="easy-payment">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Modal for Fresh and Organic -->
+    <div id="fresh-organic-modal" class="feature-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Fresh and Organic Produce</h3>
+            <img src="fresh-produce.jpg" alt="Fresh and Organic">
+            <p>We are committed to providing you with the freshest and finest organic produce. Our items are sourced directly from local, sustainable farms that adhere to strict organic farming practices. This ensures that you receive nutrient-rich, chemical-free food, supporting both your health and local communities.</p>
+            <p>Experience the difference in taste and quality with our hand-picked selection, delivered straight to your doorstep.</p>
+        </div>
+    </div>
+
+    <!-- Modal for Free Delivery -->
+    <div id="free-delivery-modal" class="feature-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Convenient Free Delivery</h3>
+            <img src="delivery.jpg" alt="Free Delivery">
+            <p>Enjoy the ultimate convenience with our free delivery service for all orders above RS 500. We understand your time is valuable, so we ensure prompt and reliable delivery directly to your home or office. Our dedicated delivery team handles your groceries with care, guaranteeing they arrive fresh and in perfect condition.</p>
+            <p>Simply place your order, and let us take care of the rest, saving you time and effort.</p>
+        </div>
+    </div>
+
+    <!-- Modal for Easy Payment -->
+    <div id="easy-payment-modal" class="feature-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Secure and Easy Payment Options</h3>
+            <img src="payment.jpg" alt="Easy Payment">
+            <p>We offer a variety of secure and user-friendly payment methods to make your shopping experience seamless. Choose from credit/debit cards, mobile wallets, net banking, or cash on delivery. Our payment gateway is encrypted and secure, protecting your financial information.</p>
+            <p>Shopping with us is not just convenient but also safe and hassle-free, allowing you to complete your purchase with confidence.</p>
+        </div>
+    </div>
+    </section>
+    <!-- feature section end -->
+<!-- product section start -->
+<section class="products" id="products">
+    <h1 class="heading">Our <span>Products</span></h1>
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="orange.jpg" alt="">
+                <h3>Orange</h3>
+                <p>Sweet and ripe oranges, a great source of vitamin C.</p>
+                <div class="price">RS 60</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <a href="#" class="btn">Add to Cart</a>
+        </div>
+        <div class="swiper-slide box">
+            <img src="apple.jpg" alt="">
+            <h3>Apple</h3>
+            <p>Fresh and crunchy apples, perfect for snacking.</p>
+            <div class="price">RS 80</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <a href="#" class="btn">Add to Cart</a>
+        </div>
+        <div class="swiper-slide box">
+            <img src="meat.jpg" alt="">
+            <h3>Meat</h3>
+            <p>Fresh and high-quality meat, sourced from local farms.</p>
+            <div class="price">RS 300</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <a href="#" class="btn">Add to Cart</a>
+        </div>
+        <div class="swiper-slide box">
+            <img src="cabbage.jpg" alt="">
+            <h3>Cabbage</h3>
+            <p>Fresh and crunchy cabbage, perfect for salads.</p>
+            <div class="price">RS 40</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <a href="#" class="btn">Add to Cart</a>
+    </div>
+    </div>
+    </div>
+
+
+     <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="potato.jpg" alt="">
+                <h3>Potato</h3>
+                <p>Fresh and versatile potatoes, perfect for any dish.</p>
+                <div class="price">RS 40</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <a href="#" class="btn">Add to Cart</a>
+        </div>
+        <div class="swiper-slide box">
+            <img src="avocado.jpg" alt="">
+            <h3>Avocado</h3>
+            <p>Fresh and creamy avocados, perfect for salads and spreads.</p>
+            <div class="price">RS 120</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <a href="#" class="btn">Add to Cart</a>
+        </div>
+        <div class="swiper-slide box">
+            <img src="carrot.jpg" alt="">
+            <h3>Carrot</h3>
+            <p>Fresh and crunchy carrots, perfect for snacking.</p>
+            <div class="price">RS 50</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <a href="#" class="btn">Add to Cart</a>
+        </div>
+        <div class="swiper-slide box">
+            <img src="lemon.jpg" alt="">
+            <h3>Lemon</h3>
+            <p>Fresh and zesty lemons, perfect for cooking and drinks.</p>
+            <div class="price">RS 40</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <a href="#" class="btn">Add to Cart</a>
+    </div>
+      </div>
+        </div>
+    </div>
+ 
+</section>
+<!-- production section ends -->
+ <!-- categories section start -->
+ <section class ="categories" id="categories">
+    <h1 class="heading">Our <span>Categories</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="fruits.jpg" alt="">
+            <h3>Fruits</h3>
+            <p>Explore our wide range of fresh and organic fruits.</p>
+            <a href="#" class="btn view-category-modal" data-category-id="fruits">Shop Now</a>
+        </div>
+        <div class="box">
+            <img src="vegetable.jpg" alt="">
+            <h3>Vegetables</h3>
+            <p>Discover our selection of fresh and healthy vegetables.</p>
+            <a href="#" class="btn view-category-modal" data-category-id="vegetables">Shop Now</a>
+        </div>
+
+        <div class="box">
+            <img src="dairy.jpg" alt="">
+            <h3>Dairy Products</h3>
+            <p>Find a variety of dairy products, including milk, cheese, and yogurt.</p>
+            <a href="#" class="btn view-category-modal" data-category-id="dairy">Shop Now</a>
+        </div>
+        
+        <div class="box">
+            <img src="meats.jpg" alt="">
+            <h3>Fresh Meat</h3>
+            <p>Enjoy our range of delicious fresh meats for every occasion.</p>
+            <a href="#" class="btn view-category-modal" data-category-id="meat">Shop Now</a>
+    </div>
+    </div>
+    
+
+
+  <!-- Fruits Modal -->
+  <div id="fruits-modal" class="category-modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Fruits</h3>
+      <img src="fruits.jpg" alt="Fruits Category" />
+      <p>Our fruits selection includes a variety of fresh and organic options such as:</p>
+      <ul>
+        <li>Apples, Bananas, Grapes, Oranges, Strawberries, Avocados, Peaches</li>
+        <li>Citrus fruits like Lemons, Limes, Mandarins, and Grapefruits</li>
+        <li>Berries including Blueberries, Raspberries, Blackberries, Cranberries</li>
+        <li>Exotic fruits such as Mangoes, Pineapples, Papayas, Dragon Fruit</li>
+        <li>Melons like Watermelon, Cantaloupe, Honeydew</li>
+      </ul>
+      <p>We source these fruits seasonally and locally when possible to ensure freshness and quality. Perfect for snacking, cooking, or juicing.</p>
+    </div>
+    </div>
+
+      <!-- Vegetables Modal -->
+  <div id="vegetables-modal" class="category-modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Vegetables</h3>
+      <img src="vegetable.jpg" alt="Vegetables Category" />
+      <p>Our vegetable selection includes fresh and healthy options such as:</p>
+      <ul>
+        <li>Potatoes, Onions, Carrots, Salad Greens, Broccoli, Peppers, Tomatoes, Cucumbers</li>
+        <li>Leafy greens like Spinach, Kale, Lettuce, Swiss Chard</li>
+        <li>Root vegetables such as Beets, Parsnips, Radishes</li>
+        <li>Other favorites like Cauliflower, Eggplant, Zucchini, Green Beans</li>
+      </ul>
+      <p>We prioritize fresh, often organic produce suitable for any meal, from salads to stews.</p>
+    </div>
+  </div>
+   <!-- Dairy Products Modal -->
+  <div id="dairy-modal" class="category-modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Dairy Products</h3>
+      <img src="dairy.jpg" alt="Dairy Products Category" />
+      <p>Explore our extensive range of dairy products including:</p>
+      <ul>
+        <li>Butter, Cheddar Cheese, Cream Cheese, Feta Cheese</li>
+        <li>Fresh Milk, Yogurt, Sour Cream, Whipped Cream</li>
+        <li>Eggs and various dairy dips</li>
+      </ul>
+      <p>We offer options from local dairies, organic varieties, and specialty products for all your cooking and baking needs.</p>
+    </div>
+  </div>
+<!-- Meat Category Modal -->
+<div id="meat-modal" class="category-modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Fresh Meat</h3>
+        <img src="meats.jpg" alt="Meat Category" />
+        <p>Our fresh meat selection includes a variety of high-quality options such as:</p>
+        <ul>
+            <li>Chicken versatile and lean, perfect for grilling, baking, or frying.</li>
+            <li>Buff :including ribeye, sirloin, ground Buff, brisket, and prime rib, great for roasting, grilling, or slow cooking.</li>
+            <li>Pork :pork chops, tenderloin, shoulder, and bacon, ideal for roasting, grilling, or pan-frying.</li>
+            <li>Lamb :lamb chops, leg of lamb, and shanks, perfect for roasting or stewing.</li>
+            <li>Sausages and deli meats a variety of flavors and styles for quick meals or snacks.</li>
+        </ul>
+        <p>We prioritize freshness and quality, sourcing meats that are well-marbled and tender to ensure the best flavor and texture. Whether you’re preparing a family dinner, BBQ, or special occasion, our meat selection has you covered.</p>
+    </div>
+</div>
+
+ </section>
+    
+ <!-- review section start -->
+<section class="review" id="review">
+    <h1 class="heading">Customer <span>Reviews</span></h1>
+    <div class="swiper review-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="customer1.jpg" alt="">
+                <p>"Great quality products and fast delivery! Highly recommend."</p>
+                <h3>Dhankumar thapa</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="customer2.jpg" alt="">
+                <p>"I love the variety of organic options available. Will shop again!"</p>
+                <h3>Ramey aryal</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="customer3.jpg" alt="">
+                <p>"Excellent customer service and fresh products. Very satisfied!"</p>
+                <h3>Aama</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="customer4.jpg" alt="">
+                <p>"The delivery was quick and the products were fresh. Will order again!"</p>
+                <h3>Browney Sharma</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ <!-- review section end here  -->
+ <!-- blogs section starts here  -->
+<section class="blogs" id="blogs">
+    <h1 class="heading">Our <span>Blogs</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="blog1.jpg" alt="">
+            <div class="content">
+                <div class="icons">
+                     <a href="#"><i class="fas fa-calendar"></i> 1st Jan, 2023</a>
+                    <a href="#"><i class="fas fa-user"></i> by user</a>
+                </div>  
+                    
+                <h3>Fresh and organic Vegetables</h3>
+                <p class="summary">Discover the benefits of incorporating fresh and organic vegetables into your diet.</p>
+                <a href="#" class="btn read-more-modal"data-blog-id="blog1">Read More</a>
+            </div>
+        </div>
+
+        
+        <!-- Hidden Modal for Blog Post 1 -->
+        <div id="blog1-modal" class="blog-modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>Fresh and organic Vegetables</h3>
+                <img src="blog1.jpg" alt="Fresh and organic Vegetables">
+                <p>Eating fresh and organic vegetables provides essential nutrients, antioxidants, and fiber that promote good health. Organic farming avoids synthetic pesticides, making produce safer and more environmentally friendly. Incorporate a colorful variety of vegetables into your meals for optimal benefits.</p>
+                <p>This is further detailed information about blog post 1. You can add as much content as you need here.</p>
+            </div>
+        </div>
+
+            <div class="box">
+                <img src="blog2.jpg" alt="">
+                <div class="content">
+                <div class="icons"> 
+                    <a href="#"><i class="fas fa-calendar"></i> 15th Jan, 2023</a>
+                    <a href="#"><i class="fas fa-user"></i> by user</a>
+                </div>
+                <h3>Seasonal Vegetables</h3>
+                <p class="summary">Explore delicious recipes using seasonal ingredients.</p>
+                <a href="#" class="btn read-more-modal"data-blog-id="blog2">Read More</a>
+            </div>
+        </div>
+        <!-- Hidden Modal for Blog Post 2 -->
+        <div id="blog2-modal" class="blog-modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>Seasonal Vegetables</h3>
+                <img src="blog2.jpg" alt="Seasonal Vegetables">
+                <p>Seasonal vegetables are fresher, tastier, and often more affordable. They provide the best flavors and nutrients at the right time of the year. Try recipes that highlight seasonal produce like roasted squash in fall or fresh tomatoes in summer for a delightful culinary experience.</p>
+                <p>Here you can elaborate on specific seasonal recipes and benefits of eating seasonally.</p>
+            </div>
+        </div>
+
+            <div class="box">
+                <img src="blog3.jpg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-calendar"></i> 30th Jan, 2023</a>
+                        <a href="#"><i class="fas fa-user"></i> by user</a>
+                    </div>
+                    <h3>Grocery Shopping Guide</h3>
+                    <p class="summary">Learn how to make the most of your grocery shopping experience.</p>
+                    <a href="#" class="btn read-more-modal"data-blog-id="blog3">Read More</a>
+                </div>
+            </div>
+            
+        <!-- Hidden Modal for Blog Post 3 -->
+        <div id="blog3-modal" class="blog-modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>Grocery Shopping Guide</h3>
+                <img src="blog3.jpg" alt="Grocery Shopping Guide">
+                <p>Planning your grocery shopping can save time and money. Make a list, stick to it, and shop the perimeter of the store for fresh produce, dairy, and meats. Avoid impulse buys and check for deals on staples. Shopping smart helps maintain a healthy diet and budget.</p>
+                <p>This section can include tips for meal planning, recognizing fresh produce, and utilizing sales to your advantage.</p>
+            </div>
+        </div>
+    </div>
+
+ <!-- blogs section ends -->
+<!-- blogs  -->
+ <!-- footer section start -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>groco <i class="fas fa-shopping-basket" ></i></h3>
+            <p>Groco is your one-stop online grocery shop, delivering fresh products right to your door!</p>
+           <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+             <a href="#" class="fab fa-twitter"></a>
+              <a href="#" class="fab fa-instagram"></a>
+               <a href="#" class="fab fa-linkedin"></a>
+           
+           </div>
+        </div>
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#" class="links"><i class="fas fa-phone"></i> 9867573412</a>
+            <a href="#" class="links"><i class="fas fa-phone"></i> 9754852365</a>
+            <a href="#" class="links"><i class="fas fa-envelope"></i>ramita@h\gmail.com</a>
+            <a href="#" class="links"><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal-787878</a>
+        </div>
+ <div class="box">
+            <h3>quick link</h3>
+            <a href="#" class="links"><i class="fas fa-arrow-right"></i> home</a>
+            <a href="#" class="links"><i class="fas fa-arrow-right"></i> feature</a>
+            <a href="#" class="links"><i class="fas fa-arrow-right"></i> products</a>
+                        <a href="#" class="links"><i class="fas fa-arrow-right"></i> categories</a>
+                                    <a href="#" class="links"><i class="fas fa-arrow-right"></i> review</a>
+                                                <a href="#" class="links"><i class="fas fa-arrow-right"></i>blogs</a>
+            
+        </div>
+     <div class="box">
+    <h3>new letter</h3>
+    <p>subscribe for latest update</p>
+    <form></form>
+    <input  type="email" placeholder="your email" class="email">
+    <input type="submit" value="subscribe" class="btn">
+    <img src="pay.jpg" class="payment-img" alt="">
+
+            
+        </div>
+    </div>
+</section>
+
+
+ <!-- footer section ends -->
+ <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+ 
