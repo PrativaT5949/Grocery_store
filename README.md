@@ -45,13 +45,13 @@ Users can browse products, search for items, add them to a shopping cart, and lo
 ![Home Banner](images/Home.png)  
 
 **Product Example**  
-![Product](images/Product.jpg)  
+![Product](images/Product.png)  
 
 **Shopping Cart Example**  
 ![Cart](images/Category.png)  
 
 **Feature Preview**  
-![Blog](images/Feature.jpg)  
+![Blog](images/Feature.png)  
 
 **Review**
 ![Review](images/Review.png)
