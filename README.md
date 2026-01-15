@@ -42,19 +42,25 @@ Users can browse products, search for items, add them to a shopping cart, and lo
 ## **Screenshots / Preview**
 
 **Homepage Banner**  
-![Home Banner](images/home-ban.png)  
+![Home Banner](images/Home.png)  
 
 **Product Example**  
 ![Product](images/Product.jpg)  
 
 **Shopping Cart Example**  
-![Cart](images/cart.png)  
+![Cart](images/Category.png)  
 
-**Blog Preview**  
-![Blog](images/blog.jpg)  
+**Feature Preview**  
+![Blog](images/Feature.jpg)  
 
 **Review**
 ![Review](images/Review.png)
+
+**Customer**
+![Customer](images/Customer.png)
+
+**Blog**
+![Blog](images/Blog.png)
 
 ## **How to Run the Website**
 
