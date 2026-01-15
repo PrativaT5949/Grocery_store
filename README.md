@@ -53,10 +53,7 @@ Users can browse products, search for items, add them to a shopping cart, and lo
 **Feature Preview**  
 ![Blog](images/Feature.png)  
 
-**Review**
-![Review](images/Review.png)
-
-**Customer**
+**Customer Review**
 ![Customer](images/Customer.png)
 
 **Blog**
